@@ -38,4 +38,4 @@
 
   - tags, class '.', id '#', \* - all html elements
 
-- box-sizing
+- box-sizing = border-box
