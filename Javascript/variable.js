@@ -27,21 +27,24 @@ console.log(a==c); // true - values
 console.log(a===c); //false - datatypes
 
 // Conditions
-
+age = 24
+if(age < 18){
+    console.log("minor");
+}
+else{
+    console.log("major");
+}
 
 function checkAge(){
     if(age < 18){
-        console.log(age);
-    }
-    if(age>50){
-        console.log("old");
-    }else if (30 <= age < 60){
-        console.log("adultug");
-    }else if (18 <= age <30){
+        console.log("Young");
+    }else if (age < 30){
+        console.log("adult");
+    }else if (age < 50){
         console.log("middle age");
     }
     else{
-        console.log("Young");
+        console.log("old");
     }
 }
 

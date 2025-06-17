@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <p>count: <span id="count"></span></p>
+    <button onclick="increment()">add</button>
+    <button onclick="decrement()">sub</button>
+
+    <script>
+      // local storage send and receive data
+      const getData = () => localStorage.getItem("data");
+      const setDate = (count) => localStorage.setItem("data", count);
+
+      //  display dynamic data in html
+      const countSpan = document.getElementById("count");
+      const changeCount = (count) => (countSpan.innerText = count);
+
+      //   variable
+      let count = getData() ? getData() : 0;
+      countSpan.innerText = count;
+      countSpan.style.color = "red";
+
+      function increment() {
+        count++;
+        changeCount(count);
+        setDate(count);
+      }
+
+      function decrement() {
+        count--;
+        changeCount(count);
+        setDate(count);
+      }
+
+      // Arrow function concept
+      const sq = (a) => a * a;
+      console.log(sq(3));
+
+      const greet = () => "hi";
+      console.log(greet());
+    </script>
+  </body>
+</html>

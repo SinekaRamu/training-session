@@ -7,3 +7,10 @@
 - Conditional Statements
 - loops
 - event attributes
+
+
+## Counter App
+
+- local storage
+- arrow function
+- dynamic data change
