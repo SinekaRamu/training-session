@@ -1,0 +1,8 @@
+.todo-form{
+    background-color: bisque;
+}
+
+.todo-form form{
+    display: flex;
+    gap: 15px;
+}

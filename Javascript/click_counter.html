@@ -24,16 +24,26 @@
       countSpan.innerText = count;
       countSpan.style.color = "red";
 
+      function setColor() {
+        if (count < 0) {
+          countSpan.style.color = "red";
+        } else {
+          countSpan.style.color = "green";
+        }
+      }
+
       function increment() {
         count++;
         changeCount(count);
         setDate(count);
+        setColor();
       }
 
       function decrement() {
         count--;
         changeCount(count);
         setDate(count);
+        setColor();
       }
 
       // Arrow function concept
