@@ -39,3 +39,14 @@
   - tags, class '.', id '#', \* - all html elements
 
 - box-sizing = border-box
+
+## JavaScript
+
+- classic javascript
+- DOM elements
+- Local storage
+- Todo App
+
+## REACT JS
+
+- Todo App using React
