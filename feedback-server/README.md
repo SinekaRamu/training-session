@@ -62,3 +62,43 @@ curl -X POST http://localhost:5000/submit -H "Content-Type: application/json" -d
 ```
 
 `curl -X GET http://localhost:5000/submissions -H "Content-Type: application/json"`
+
+6. Set up Mongo db
+- Download mongodb `https://www.mongodb.com/try/download/community`
+
+![alt text](image.png)
+- Then Install
+- create a database and connect
+
+7. Mongoose Library
+
+- `npm install mongoose` to install mongoose
+- Set up mongodb connection in server.js 
+
+```
+const mongoose = require("mongoose");
+
+   mongoose.connect("mongodb://localhost:27017/feedbackDB", {
+     useNewUrlParser: true,
+     useUnifiedTopology: true
+   })
+   .then(() => console.log("Connected to MongoDB"))
+   .catch((err) => console.error("MongoDB connection error:", err));
+```
+- create schema in Models directory
+
+```
+const mongoose = require("mongoose");
+
+const feedbackSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+  date: { type: Date, default: Date.now }
+});
+
+const Feedback = mongoose.model("Feedback", feedbackSchema);
+module.exports = Feedback;
+
+```
+
